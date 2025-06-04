@@ -1,0 +1,4 @@
+curl -X POST -H "Content-Type: application/json" -d "{\"banks\": [{\"id\": \"jpm\", \"name\":\"JPMorgan Chase\", \"irurl\": \"https://www.jpmorganchase.com/ir/quarterly-earnings\"}], \"documentTypes\": [{\"id\":\"press\", \"name\":\"Press Release\"}], \"quarter\":[{\"id\":\"2023Q4\", \"name\":\"Q4 2024\"}]}" http://127.0.0.1:5000/discoverDocument
+
+
+curl -X POST -H "Content-Type: application/json" -d "[{\"bankId\": \"jpm\", \"docType\": \"press\", \"id\": \"jpm-press-2023Q4\", \"name\": \"4Q24 Earnings Press Release\", \"status\": \"found\",\"url\": \"https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/36b3c0a4-3ecd-422e-8167-0a31372f3438.pdf\",\"quarter\":\"2024Q4\"}]"  http://127.0.0.1:5000/downloadDocuments
